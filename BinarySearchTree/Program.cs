@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BinarySearchTree
 {
@@ -6,7 +7,13 @@ namespace BinarySearchTree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to  BinarySearchTree");
+            BinaryTree<int> tree = new BinaryTree<int>();
+            tree.Insert(45);
+            tree.Insert(54);
+            tree.Insert(34);
+            tree.Size();
+            Console.ReadKey();
         }
     }
 }
