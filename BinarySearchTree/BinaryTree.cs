@@ -46,7 +46,7 @@ namespace BinarySearchTree
         }
 
         
-        public bool SearchRecursively(Node<T> current, T key)
+        public bool SearchKey(Node<T> current, T key)
         {
             if (current == null)
                 return false;
@@ -54,16 +54,16 @@ namespace BinarySearchTree
             if (compareResult == 0)
                 return true;
             if (compareResult < 0)
-                return SearchRecursively(current.left, key);
+                return SearchKey(current.left, key);
             else
-                return SearchRecursively(current.right, key);
+                return SearchKey(current.right, key);
 
         }
 
        
         public bool Search(T key)
         {
-            bool isPresent = SearchRecursively(root, key);
+            bool isPresent = SearchKey(root, key);
             return isPresent;
         }
     }
